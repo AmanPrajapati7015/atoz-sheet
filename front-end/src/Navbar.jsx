@@ -1,7 +1,7 @@
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 
-const backendURI = 'http://atoz-sheet-env.eba-4sn9xnkt.ap-south-1.elasticbeanstalk.com'
+const backendURI = 'https://api.atoz.linkpc.net'
 
 
 const Navbar = ({ user, setUser }) => {

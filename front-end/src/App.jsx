@@ -7,7 +7,7 @@ import Category from './Category'
 import Navbar from './Navbar';
 import Stats from './Stats';
 
-const backendURI = 'http://atoz-sheet-env.eba-4sn9xnkt.ap-south-1.elasticbeanstalk.com'
+const backendURI = 'https://api.atoz.linkpc.net'
 
 function App() {
   const [problems, setProblems] = useState({});

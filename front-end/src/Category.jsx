@@ -5,7 +5,7 @@ import './Category.css';
 import videoLink from './assets/video.svg'
 import LinkImg from './assets/link.svg'
 
-const backendURI = 'http://atoz-sheet-env.eba-4sn9xnkt.ap-south-1.elasticbeanstalk.com'
+const backendURI = 'https://api.atoz.linkpc.net'
 
 
 function Difficulty({ points }) {
