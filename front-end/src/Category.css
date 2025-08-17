@@ -1,0 +1,17 @@
+div.status{
+    display: flex;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+div.status .green {
+    background-color: #49C68D;
+    border-radius: 10px ; 
+    flex: 69;
+}
+div.status .remaining {
+    flex: 31;
+    border-radius: 10px;
+
+}
