@@ -1,6 +1,7 @@
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 
+const backendURI = 'http://atoz-sheet-env.eba-4sn9xnkt.ap-south-1.elasticbeanstalk.com'
 
 
 const Navbar = ({ user, setUser }) => {
@@ -9,7 +10,7 @@ const Navbar = ({ user, setUser }) => {
         try {
             if (authResult['code']) {
                 const code = authResult['code'];
-                const resp = await axios.get(`/api/auth/google?code=${code}`)
+                const resp = await axios.get(`${backendURI}/auth/google?code=${code}`)
                 localStorage.setItem('user', JSON.stringify(resp.data));
                 setUser(resp.data);
             }

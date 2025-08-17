@@ -7,6 +7,8 @@ import Category from './Category'
 import Navbar from './Navbar';
 import Stats from './Stats';
 
+const backendURI = 'http://atoz-sheet-env.eba-4sn9xnkt.ap-south-1.elasticbeanstalk.com'
+
 function App() {
   const [problems, setProblems] = useState({});
   const [isDone, setIsDone] = useState([]);
@@ -15,11 +17,11 @@ function App() {
 
   async function fetchProblems() {
     setLoading(true);
-    const response = await axios.get('/api/all');
+    const response = await axios.get(backendURI + '/all');
 
     try {
       if (user.token) {
-        const statusResponse = await axios.get('/api/status', {
+        const statusResponse = await axios.get(backendURI + '/status', {
           headers: {
             'Authorization': `Bearer ${user.token}`
           }

@@ -10,13 +10,5 @@ export default defineConfig({
     tailwindcss(),
   ],
   
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://atoz-sheet-env.eba-4sn9xnkt.ap-south-1.elasticbeanstalk.com/',
-        changeOrigin: true,   // 👈 makes the host header = target
-        rewrite: (path) => path.replace(/^\/api/, ''), 
-      },
-    },
-  },
+  
 })

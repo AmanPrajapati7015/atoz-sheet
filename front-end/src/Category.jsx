@@ -5,6 +5,9 @@ import './Category.css';
 import videoLink from './assets/video.svg'
 import LinkImg from './assets/link.svg'
 
+const backendURI = 'http://atoz-sheet-env.eba-4sn9xnkt.ap-south-1.elasticbeanstalk.com'
+
+
 function Difficulty({ points }) {
     if (points <= 2)
         return <p className='font-bold text-[#00AC5F]'>Easy</p>;
@@ -34,7 +37,7 @@ function Category({ category, isDone, setIsDone, user }) {
     function toggleDone(problemNo) {
         return async () => {
             try {
-                const response = await axios.post(`/api/toggle/${problemNo}`, {}, {
+                const response = await axios.post(`${backendURI}/toggle/${problemNo}`, {}, {
                     headers: { 'Authorization': `Bearer ${user.token}` }
                 });
 
