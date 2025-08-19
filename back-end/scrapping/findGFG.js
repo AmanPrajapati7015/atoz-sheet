@@ -32,15 +32,17 @@ async function findGFGLink(query) {
     return firstResult;
 }
 
-let problems = await pool.query('SELECT problem_no, problem_name FROM problems where difficulty is null');
+let problems = await pool.query('SELECT problem_no, problem_name FROM problems');
 for(let problem of problems.rows){
     let link = await findGFGLink(problem.problem_name + ' practice');
-    pool.query(
-        `UPDATE problems SET practice_link = $1 WHERE problem_no = $2`,
-        [link, problem.problem_no]
-    );
+    // pool.query(
+    //     `UPDATE problems SET practice_link = $1 WHERE problem_no = $2`,
+    //     [link, problem.problem_no]
+    // );
     console.log(`Updated problem ${problem.problem_name} with link: ${link}`);
 }
+
+await findGFGLink('binary search ')
 
 
 await browser.close();

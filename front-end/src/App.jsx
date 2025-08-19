@@ -7,7 +7,7 @@ import Category from './Category'
 import Navbar from './Navbar';
 import Stats from './Stats';
 
-const backendURI = 'https://api.atoz.linkpc.net'
+
 
 function App() {
   const [problems, setProblems] = useState({});
@@ -17,11 +17,11 @@ function App() {
 
   async function fetchProblems() {
     setLoading(true);
-    const response = await axios.get(backendURI + '/all');
+    const response = await axios.get('/all');
 
     try {
       if (user.token) {
-        const statusResponse = await axios.get(backendURI + '/status', {
+        const statusResponse = await axios.get('/status', {
           headers: {
             'Authorization': `Bearer ${user.token}`
           }

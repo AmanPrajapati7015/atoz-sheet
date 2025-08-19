@@ -1,7 +1,7 @@
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 
-const backendURI = 'https://api.atoz.linkpc.net'
+
 
 
 const Navbar = ({ user, setUser }) => {
@@ -10,7 +10,7 @@ const Navbar = ({ user, setUser }) => {
         try {
             if (authResult['code']) {
                 const code = authResult['code'];
-                const resp = await axios.get(`${backendURI}/auth/google?code=${code}`)
+                const resp = await axios.get(`/auth/google?code=${code}`)
                 localStorage.setItem('user', JSON.stringify(resp.data));
                 setUser(resp.data);
             }

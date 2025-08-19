@@ -5,7 +5,7 @@ import './Category.css';
 import videoLink from './assets/video.svg'
 import LinkImg from './assets/link.svg'
 
-const backendURI = 'https://api.atoz.linkpc.net'
+
 
 
 function Difficulty({ points }) {
@@ -37,7 +37,7 @@ function Category({ category, isDone, setIsDone, user }) {
     function toggleDone(problemNo) {
         return async () => {
             try {
-                const response = await axios.post(`${backendURI}/toggle/${problemNo}`, {}, {
+                const response = await axios.post(`/toggle/${problemNo}`, {}, {
                     headers: { 'Authorization': `Bearer ${user.token}` }
                 });
 
