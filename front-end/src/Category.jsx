@@ -88,6 +88,7 @@ function Category({ category, isDone, setIsDone, user }) {
                 <tbody>
                     {category.problems.map(problem => (
                         <tr
+                            data-problem-no={problem.problem_no}
                             className={'flex flex-1 text-center items-center border-b border-[#5E5E5E]  py-2 ' +
                                 `${isDone[problem.problem_no] ? 'bg-[#214B52]' : 'bg-[#2E3136]'}`}
 

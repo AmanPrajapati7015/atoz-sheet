@@ -53,10 +53,11 @@ app.use('/auth', authRouter);
 // Route to fetch all problems
 app.get('/all', async (req, res) => {
   const { rows: problems } = await pool.query(
-  `SELECT *
-  FROM problems
-  JOIN category ON problems.cat_id = category.cat_id
-  ORDER BY category.cat_id;`);
+    `SELECT *
+    FROM problems
+    JOIN category ON problems.cat_id = category.cat_id
+    ORDER BY problem_no;`
+  );
   res.json(problems);
 });
 

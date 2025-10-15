@@ -1,6 +1,6 @@
 next steps / todos
 1. add search option
-2. add toggle_by 
+2. add sort toggle_by 
 	a. difficulty
 	b. name
 	c. normal 

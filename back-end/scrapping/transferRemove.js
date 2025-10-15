@@ -18,8 +18,8 @@ const problems = await localPool.query('select * from problems');
 console.log(problems.rows);
 
 problems.rows.forEach( async prob =>{
-    await transferPool.query('insert into problems (problem_name, solution_link, practice_link, difficulty , cat_id) values ($1, $2, $3, $4, $5)', 
-        [prob.problem_name, prob.solution_link, prob.practice_link, prob.difficulty, prob.cat_id]);
+    await transferPool.query('insert into problems (problem_no, problem_name, solution_link, practice_link, difficulty , cat_id) values ($1, $2, $3, $4, $5, $6)', 
+        [prob.problem_no, prob.problem_name, prob.solution_link, prob.practice_link, prob.difficulty, prob.cat_id]);
 
 
 })

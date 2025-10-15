@@ -53,9 +53,6 @@ function App() {
       problemList[problem.cat_id].problems.push(problem);
     }
 
-    for (let id in problemList) {
-      problemList[id].problems.sort((a, b) => a.difficulty - b.difficulty);
-    }
 
     setProblems(problemList);
     setLoading(false);
