@@ -17,7 +17,7 @@ import authRouter from './auth.js';
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "frontend")));
+app.use(express.static(path.join(__dirname, "../front-end/dist")));
 
 
 const PORT = process.env.PORT || 3000;
@@ -49,6 +49,11 @@ const authenticate = async (req, res, next) => {
 }
 
 app.use('/auth', authRouter);
+
+
+app.get('/check', (req, res)=>{
+  res.send('running fine');
+})
 
 // Route to fetch all problems
 app.get('/all', async (req, res) => {
