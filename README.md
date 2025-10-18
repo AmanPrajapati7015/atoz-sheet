@@ -3,7 +3,7 @@
 ## Live info
 
 - [link](https://www.atozsheet.app)
-- [uptime](https://06rjr05y.status.cron-job.org)
+- [uptime](https://status.atozsheet.app)
 
 ## next steps / todos
 
