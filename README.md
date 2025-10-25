@@ -5,6 +5,10 @@
 - [link](https://www.atozsheet.app)
 - [uptime](https://status.atozsheet.app)
 
+## databse schema
+
+![Database Schema](./assets/database_schema.png)
+
 ## next steps / todos
 
 1. select random button
