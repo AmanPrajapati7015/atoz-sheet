@@ -99,9 +99,9 @@ function Category({ category, isDone, setIsDone, user }) {
                                     isDone[problem.problem_no] ? '✅' : '📋'
                                 }
                             </td>
-                            <td className='flex-4 flex gap-4 items-center'>
-                                <p className='font-bold'>{problem.problem_name} </p>
-                                <a href={problem.practice_link} target='_blank'>
+                            <td className='flex-4'>
+                                <a className='flex gap-4 items-center' href={problem.practice_link} target='_blank'>
+                                    <p className='font-bold'>{problem.problem_name} </p>
                                     <img title='External Link' src={LinkImg} width='15px' alt="" />
                                 </a>
 
